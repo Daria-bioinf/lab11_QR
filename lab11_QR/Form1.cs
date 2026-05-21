@@ -134,5 +134,25 @@ namespace lab11_QR
                 MessageBox.Show("PNG zapisany");
             }
         }
+
+        private void buttonSearch_Click(object sender, EventArgs e)
+        {
+            using (SQLiteConnection connection = new SQLiteConnection(connectionString))
+            {
+                connection.Open();
+
+                string query =@"SELECT *FROM Samples WHERE ID LIKE @search OR Name LIKE @search OR Type LIKE @search";
+
+                SQLiteDataAdapter adapter = new SQLiteDataAdapter(query, connection);
+
+                adapter.SelectCommand.Parameters.AddWithValue( "@search","%" +textBoxSearch.Text +"%");
+
+                DataTable table = new DataTable();
+
+                adapter.Fill(table);
+
+                dataGridView1.DataSource = table;
+            }
+        }
     }
 }

@@ -45,6 +45,8 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.textBoxSearch = new System.Windows.Forms.TextBox();
+            this.buttonSearch = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxQR)).BeginInit();
             this.SuspendLayout();
@@ -85,7 +87,7 @@
             // 
             // richTextBoxDesc
             // 
-            this.richTextBoxDesc.Location = new System.Drawing.Point(22, 325);
+            this.richTextBoxDesc.Location = new System.Drawing.Point(22, 476);
             this.richTextBoxDesc.Name = "richTextBoxDesc";
             this.richTextBoxDesc.Size = new System.Drawing.Size(173, 85);
             this.richTextBoxDesc.TabIndex = 4;
@@ -104,7 +106,7 @@
             // 
             // pictureBoxQR
             // 
-            this.pictureBoxQR.Location = new System.Drawing.Point(22, 437);
+            this.pictureBoxQR.Location = new System.Drawing.Point(491, 453);
             this.pictureBoxQR.Name = "pictureBoxQR";
             this.pictureBoxQR.Size = new System.Drawing.Size(183, 128);
             this.pictureBoxQR.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -113,7 +115,7 @@
             // 
             // buttonSave
             // 
-            this.buttonSave.Location = new System.Drawing.Point(201, 325);
+            this.buttonSave.Location = new System.Drawing.Point(201, 476);
             this.buttonSave.Name = "buttonSave";
             this.buttonSave.Size = new System.Drawing.Size(126, 34);
             this.buttonSave.TabIndex = 7;
@@ -123,7 +125,7 @@
             // 
             // buttonLoad
             // 
-            this.buttonLoad.Location = new System.Drawing.Point(201, 367);
+            this.buttonLoad.Location = new System.Drawing.Point(201, 528);
             this.buttonLoad.Name = "buttonLoad";
             this.buttonLoad.Size = new System.Drawing.Size(126, 33);
             this.buttonLoad.TabIndex = 8;
@@ -190,7 +192,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(73, 294);
+            this.label5.Location = new System.Drawing.Point(73, 435);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(77, 16);
             this.label5.TabIndex = 15;
@@ -199,17 +201,36 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(223, 464);
+            this.label6.Location = new System.Drawing.Point(417, 453);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(68, 16);
             this.label6.TabIndex = 16;
             this.label6.Text = "QR CODE";
+            // 
+            // textBoxSearch
+            // 
+            this.textBoxSearch.Location = new System.Drawing.Point(45, 320);
+            this.textBoxSearch.Name = "textBoxSearch";
+            this.textBoxSearch.Size = new System.Drawing.Size(151, 22);
+            this.textBoxSearch.TabIndex = 18;
+            // 
+            // buttonSearch
+            // 
+            this.buttonSearch.Location = new System.Drawing.Point(45, 359);
+            this.buttonSearch.Name = "buttonSearch";
+            this.buttonSearch.Size = new System.Drawing.Size(151, 38);
+            this.buttonSearch.TabIndex = 19;
+            this.buttonSearch.Text = "Szukaj";
+            this.buttonSearch.UseVisualStyleBackColor = true;
+            this.buttonSearch.Click += new System.EventHandler(this.buttonSearch_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1296, 624);
+            this.Controls.Add(this.buttonSearch);
+            this.Controls.Add(this.textBoxSearch);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -255,6 +276,8 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox textBoxSearch;
+        private System.Windows.Forms.Button buttonSearch;
     }
 }
 
